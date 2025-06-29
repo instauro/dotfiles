@@ -1,0 +1,39 @@
+add_newline = false
+format = """\
+    $directory\
+    $kubernetes\
+    $helm\
+    $aws\
+    $env_var\
+    $git_branch\
+    $git_commit\
+    $git_state\
+    $git_status\
+    $line_break\
+    $character"""
+
+[directory]
+style = "green"
+truncation_length = 8
+
+[kubernetes]
+format = " [$symbol$context( \\($namespace\\))]($style) "
+style = "bright-blue"
+disabled = false
+contexts = [
+  { context_pattern = "*kind.*", style = "cyan bold", symbol = "📚 " },
+  { context_pattern = "*rancher-desktop*", style = "cyan bold", symbol = "📚 " },
+
+  { context_pattern = "dev", style = "cyan bold", symbol = "🔵 " },
+  { context_pattern = "int", style = "yellow bold", symbol = "🟡 " },
+  { context_pattern = "prod", style = "red bold", symbol = "🔴 " },
+]
+
+[git_branch]
+format = "[$symbol$branch]($style) "
+disabled = false
+
+[git_status]
+style = "yellow"
+disabled = false
+
