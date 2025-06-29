@@ -34,6 +34,8 @@ bindkey "^[[1;5D" backward-word
 alias ls='ls --color=auto'
 source <(kubectl completion zsh)
 alias k=kubectl
+alias cat=bat
+alias kubectl="kubecolor"
 
 source /home/zzz/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
