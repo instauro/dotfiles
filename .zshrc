@@ -31,8 +31,10 @@ setopt HIST_IGNORE_SPACE
 bindkey "^[[1;5C" forward-word
 bindkey "^[[1;5D" backward-word
 
-alias ls='ls --color=auto'
 source <(kubectl completion zsh)
+compdef kubecolor=kubectl
+
+alias ls='ls --color=auto'
 alias k=kubectl
 alias cat=bat
 alias kubectl="kubecolor"
