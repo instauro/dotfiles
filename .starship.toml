@@ -1,16 +1,7 @@
 add_newline = false
-format = """\
-    $directory\
-    $kubernetes\
-    $helm\
-    $aws\
-    $env_var\
-    $git_branch\
-    $git_commit\
-    $git_state\
-    $git_status\
-    $line_break\
-    $character"""
+format = """$directory$character"""
+
+right_format = """$all"""
 
 [directory]
 style = "green"
