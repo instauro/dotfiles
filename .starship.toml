@@ -8,16 +8,17 @@ style = "green"
 truncation_length = 8
 
 [kubernetes]
-format = " [$symbol$context( \\($namespace\\))]($style) "
+format = "[$symbol$context([\\($namespace\\)](cyan))]($style)"
 style = "bright-blue"
 disabled = false
 contexts = [
-  { context_pattern = "*kind.*", style = "cyan bold", symbol = "📚 " },
-  { context_pattern = "*rancher-desktop*", style = "cyan bold", symbol = "📚 " },
+  { context_pattern = ".*minikube.*", style = "green bold", symbol = "🟢 " },
+  { context_pattern = ".*kind.*", style = "green bold", symbol = "🟢 " },
+  { context_pattern = ".*rancher-desktop*", style = "green bold", symbol = "🟢 " },
 
-  { context_pattern = "dev", style = "cyan bold", symbol = "🔵 " },
-  { context_pattern = "int", style = "yellow bold", symbol = "🟡 " },
-  { context_pattern = "prod", style = "red bold", symbol = "🔴 " },
+  { context_pattern = ".*dev", style = "green bold", symbol = "🟢 " },
+  { context_pattern = ".*int", style = "yellow bold", symbol = "🟡 " },
+  { context_pattern = ".*prod", style = "red bold", symbol = "🔴 " },
 ]
 
 [git_branch]
