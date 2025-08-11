@@ -41,4 +41,10 @@ alias kubectl="kubecolor"
 
 source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+fastfetch
+export KIND_EXPERIMENTAL_PROVIDER=podman
+# export HSA_OVERRIDE_GFX_VERSION=11.0.2
+
+# Set up fzf key bindings and fuzzy completion
+source <(fzf --zsh)
