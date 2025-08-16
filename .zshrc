@@ -30,6 +30,8 @@ setopt HIST_IGNORE_SPACE
 # >>> CRTL + right arrow | CRTL + left arrow
 bindkey "^[[1;5C" forward-word
 bindkey "^[[1;5D" backward-word
+bindkey "\e[H" beginning-of-line
+bindkey "\e[F" end-of-line
 
 source <(kubectl completion zsh)
 compdef kubecolor=kubectl
